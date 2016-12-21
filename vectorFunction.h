@@ -59,3 +59,15 @@ int max (const vector <int>& UserVec){
         }
         return maxNum;
 }
+
+
+
+int min (const vector <int>& UserVec){
+    int minNum = UserVec.at(0);
+    for (int i=1; i < UserVec.size(); i++){
+        if (UserVec.at(i) < minNum){
+            minNum = UserVec.at(i);
+        }
+        }
+        return minNum;
+}

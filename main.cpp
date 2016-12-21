@@ -11,12 +11,10 @@ getInput(test);
 
 printVec(test);
 
-cout << mean(test) << endl;
+swapLocation(test);
 
-cout << add(test) <<endl;
+printVec(test);
 
-rectangle(5,10);
-
-triangle (10 ,2);
+cout << min(test) <<endl;
 return 0;
 }
