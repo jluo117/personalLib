@@ -56,7 +56,7 @@ int max (const vector <int>& UserVec){
         if (UserVec.at(i) > maxNum){
             maxNum = UserVec.at(i);
         }
-        }
+    }
         return maxNum;
 }
 
