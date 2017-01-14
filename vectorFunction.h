@@ -1,5 +1,10 @@
 #include <iostream>
 #include <vector>
+#include <ctime>
+#include <fstream>
+#include <algorithm>
+#include <cstdlib>
+#include <string>
 using namespace std;
 
 
@@ -70,4 +75,30 @@ int min (const vector <int>& UserVec){
         }
         }
         return minNum;
+}
+
+void fillVec(vector<int>& v){
+    srand (time(NULL));
+    for (int i =0; i<v.size();i++){
+        v.at(i)=(rand()%v.size());
+    }
+}
+
+void writeToFile (vector <int>& v,string fileName){
+    ofstream outFS;
+    outFS.open(fileName);
+    for (int i=0; i<v.size();i++){
+        int vAt;
+        vAt = v.at(i);
+        outFS << vAt <<endl;
+    }
+}
+void sortVec (vector <int>& v){
+    for (int i=0; i<v.size(); i++){
+        for (int r=i; r<v.size();r++){
+            if (v.at(i)>v.at(r)){
+                swap (v.at(i),v.at(r));
+            }
+        }
+    }
 }
